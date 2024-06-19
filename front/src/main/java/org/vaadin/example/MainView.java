@@ -26,6 +26,7 @@ import java.util.List;
 @Route("")
 public class MainView extends VerticalLayout {
 
+
     /**
      * Construct a new Vaadin view.
      * <p>

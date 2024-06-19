@@ -22,9 +22,10 @@ public class ShipRequests {
         HttpClient client = HttpClient.newHttpClient();
         try {
             HttpRequest request = HttpRequest.newBuilder()
-                    .uri(new URI("http://localhost:8080/ships"))
+                    .uri(new URI("http://localhost:8082/ships"))
                     .GET()
                     .build();
+            // hola
 
             HttpResponse<String> response = null;
             Gson gson = new Gson();
@@ -49,7 +50,7 @@ public class ShipRequests {
         System.out.println(gson.toJson(ship));
         try {
             HttpRequest request = HttpRequest.newBuilder()
-                    .uri(new URI("http://localhost:8080/ships"))
+                    .uri(new URI("http://localhost:8082/ships"))
                     .header("Content-Type", "application/json")
                     .POST(HttpRequest.BodyPublishers.ofString(gson.toJson(ship)))
                     .build();
